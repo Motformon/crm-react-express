@@ -13,7 +13,6 @@ mongoose.connect(keys.mongoURI, { useNewUrlParser: true })
 	.then(() => console.log('MongoDB connected.'))
 	.catch(error => console.log(error));
 
-
 app.use(require('morgan')('dev'));
  
 app.use(bodyParser.urlencoded({extended: true}));
