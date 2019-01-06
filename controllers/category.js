@@ -1,6 +1,6 @@
 module.exports.getAll = function(req, res) {
-	res.status(200).json({
-		getAll: 'from controller getAll'
+	res.json({
+		message: 'from controller getAll'
 	})
 }
 module.exports.getById = function(req, res) {
