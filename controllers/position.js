@@ -1,20 +1,37 @@
+const Position = require('../models/Position');
+const errorHandler = require('../utils/errorHandler');
+
+
 module.exports.getByCategoryId = function(req, res) {
-	res.status(200).json({
-		getByCategoryId: 'from controller getByCategoryId'
-	})
+	try {
+	 	const position = await Position.find({
+			 category: req.params.categoryId,
+			 user: req.user.id
+		 })
+		 res.status(200).json(positions) 
+	} catch(e) {
+		errorHandler(res,e);
+	}
+
 }
 module.exports.create = function(req, res) {
-	res.status(200).json({
-		create: 'from controller create'
-	})
+	try {
+	 	
+	} catch(e) {
+		errorHandler(res,e);
+	}
 }
 module.exports.remove = function(req, res) {
-	res.status(200).json({
-		remove: 'from controller remove'
-	})
+	try {
+	 	
+	} catch(e) {
+		errorHandler(res,e);
+	}
 }
 module.exports.update = function(req, res) {
-	res.status(200).json({
-		update: 'from controller update'
-	})
+	try {
+	 	
+	} catch(e) {
+		errorHandler(res,e);
+	}
 }
