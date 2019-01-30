@@ -3,7 +3,7 @@ import Sidebar from '../../components/Navigation/Sidebar/Sidebar'
 import FloatingButton from '../../components/Navigation/FloatingButton/FloatingButton'
 class Overview extends Component {
 
-  render() {
+  render() { 
     return (
       <React.Fragment>
 				<Sidebar/>
