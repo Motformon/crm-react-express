@@ -8,13 +8,14 @@ import Order from './containers/Order/Order';
 import OrderPosition from './containers/OrderPosition/OrderPosition';
 import Overview from './containers/Overview/Overview';
 import Registration from './containers/Registration/Registration';
+import FrontPage from './containers/FrontPage/FrontPage';
 import {Route, Switch, Redirect, withRouter} from 'react-router-dom';
 
 class App extends Component {
   render() {
     return (
 			<Switch>
-				<Route path="/" exact component={Login}/>
+				<Route path="/login" component={Login}/>
 				<Route path="/registration" component={Registration}/>
 				<Route path="/overview" component={Overview}/>
 				<Route path="/analytics" component={Analytics}/>
@@ -23,7 +24,7 @@ class App extends Component {
 				<Route path="/order" component={Order}/>
 				<Route path="/order-position" component={OrderPosition}/>
 				<Route path="/add-category" component={AddCategory}/>
-				<Redirect to="/" />
+				<Redirect from="/" to="/login"/>
 			</Switch>
     );
   }

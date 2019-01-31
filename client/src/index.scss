@@ -1,2 +1,11 @@
 @import "~materialize-css/dist/css/materialize.min.css";
 @import "styles.min.css";
+
+
+nav ul li a.active {
+	background-color: rgba(0, 0, 0, 0.1);
+}
+
+.sidenav li a.active {
+	background-color: rgba(0, 0, 0, 0.05);
+}
